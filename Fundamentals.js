@@ -109,3 +109,40 @@ let n3 = n1 > n2;
 // Don't change the line below
 console.log(`n1 = ${n1}, n2 = ${n2}, n3 = ${n3}`)
 ```
+
+```js
+// Type your code below
+let age = 18;
+let canVote = true;
+
+// Don't change the line below
+console.log(`age = ${age}, canVote = ${canVote}`)
+```
+
+```js
+// Given variables
+let a = 10
+let b = "10"
+let c = true
+
+// Type your code below
+let d = a == b;
+let e = a == c;
+let f = b != c;
+let g = a == b;
+
+// Don't change the line below
+console.log(`d = ${d}`)
+console.log(`e = ${e}`)
+console.log(`f = ${f}`)
+console.log(`g = ${g}`)
+```
+
+```js
+// Type your code below
+let a = 6;
+let b = 4;
+// Don't change the line below
+let c = b * a
+console.log(`c = ${c}`)
+```
