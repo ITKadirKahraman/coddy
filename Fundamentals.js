@@ -155,3 +155,44 @@ let b3 = b1 || b2
 // Don't change the line below
 console.log(`b3 = ${b3}`)
 ```
+  
+```js
+// Type your code below
+let b1 = true;
+let b2 = true;
+let b3 = true;
+
+// Don't change below
+let b4 = b1 && b2 && b3
+console.log(`b4 = ${b4}`)
+```
+
+```js
+// Type your code below
+let b1 = 3;
+let b2 = 3;
+let b3 = !((b1 + b2) > (b1 * b2))
+
+// Don't change the line below
+console.log(`b3 = ${b3}`)
+```
+
+```js
+// Type your code below
+let x = 1;
+let y = -1;
+let z = ((x * y) < (x + y) && (x + y) < (x - y))
+
+// Don't change the line below
+console.log(`z = ${z}`)
+```
+
+```js
+let b1 = true;
+let b2 = true;
+let b3 = false;
+
+// Don't change the line below
+let b4 = b1 && b2 && (!b3)
+console.log(`b4 = ${b4}`)
+```
