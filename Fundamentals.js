@@ -354,3 +354,56 @@ switch (command) {
 
 // Print the message
 console.log(message);
+
+// Type your code below
+console.log("Welcome to Coddy!");
+console.log("JavaScript is fun.");
+
+// Write code here
+let name = "Alice";
+let age = 30;
+console.log(name);
+console.log(age);
+console.log(10 + " " + 20);
+
+/*
+Du erhältst einen Code, der einen zufälligen String als Eingabe in eine Variable namens rnd speichert.
+
+Gib in die Konsole "The input is: " und den zufälligen String aus, der in der Variable rnd ist.
+*/
+
+let rnd = inp; // Don't change this line
+console.log(`The input is: ${rnd}`);
+
+/*
+Dir wird ein Code gegeben, der eine Zufallszahl als Eingabe in eine Variable namens rnd speichert.
+
+Gib "The input is: " gefolgt vom Wert von rnd aus.
+Gib aus:
+"The number is even.", wenn rnd gerade ist.
+"The number is odd.", wenn rnd ungerade ist.
+*/
+
+let rnd = inp; // Don't change this line
+if(rnd % 2 == 0){
+    console.log(`The input is: ${rnd}`);
+    console.log('The number is even.');
+}else if(rnd % 2 == 1){
+    console.log(`The input is: ${rnd}`);
+    console.log("The number is odd.")
+}
+
+/*
+Gegeben zwei Strings var1 und var2.
+
+Wandle sie zu einem float um und drucke das Produkt der beiden aus.
+*/
+
+let var1 = inp[0] // Don't change this line
+let var2 = inp[1] // Don't change this line
+
+// Write code below
+let a = parseFloat(var1);
+let b = parseFloat(var2);
+let c = a * b;
+console.log(c);
