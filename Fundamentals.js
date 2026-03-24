@@ -287,3 +287,70 @@ if(op == '+'){
 
 // Don't change the line below
 console.log(`result = ${result}`)
+
+// Was gibt dieser Code aus?
+let score = 85;
+let passed;
+if (score >= 60) {
+    if (score >= 90) {
+        passed = "Excellent";
+    } else {
+        passed = "Good";
+    }
+} else {
+    passed = "Failed";
+}
+console.log(passed);
+
+let age = parseInt(inp[0]); // Don't change this line
+let has_adult = inp[1] === "true"; // Don't change this line
+
+// Write your code below
+if(age < 10){
+    console.log("Sorry, you are too young");
+}else if(age < 13 && !has_adult){
+    console.log("Sorry, you need an adult with you");
+}else if(age < 13 && has_adult){
+    console.log("You can enter with adult supervision!");
+}else if(age >= 13){
+    console.log("You can enter by yourself!");
+}
+
+// Vervollständigen Sie die Switch-Anweisung, um die Farbe zu behandeln.
+let color = "red";
+let message;
+ 
+switch (color) {
+    case "red":
+        message = "Stop";
+        break;
+    default:
+        message = "Unknown";
+}
+
+// Get the command from the user
+let command = inp;
+
+// Create a variable to store the message
+let message;
+
+switch (command) {
+    // Write your code here
+    case 'start':
+        message = "System starting";
+        break;
+    case 'stop':
+        message = "System stopping";
+        break;
+    case 'pause':
+        message = "System paused";
+        break;
+    case 'resume':
+        message = "System resuming";
+        break;
+    case 'nothing':
+        message = "Unknown command"
+}
+
+// Print the message
+console.log(message);
