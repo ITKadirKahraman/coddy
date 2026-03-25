@@ -407,3 +407,91 @@ let a = parseFloat(var1);
 let b = parseFloat(var2);
 let c = a * b;
 console.log(c);
+
+
+let length = inp[0] // Don't change this line
+let width = inp[1] // Don't change this line
+
+// Write code below
+let len = parseFloat(length);
+let wid = parseFloat(width);
+let area = len * wid;
+let perimeter = 2 * (len + wid);
+console.log(`The area is: ${area} and the perimeter is: ${perimeter}`);
+
+// Values to convert
+const stringValue = '42';
+const zeroNumber = 0;
+const positiveNumber = 7;
+const emptyString = '';
+const boolValue = true;
+const numValue = 123;
+
+// TODO: Replace null with the correct Boolean() conversion of stringValue
+console.log("Boolean('42'): ", Boolean(stringValue));
+
+// TODO: Replace null with the correct Boolean() conversion of zeroNumber
+console.log("Boolean(0): ", Boolean(zeroNumber));
+
+// TODO: Replace null with the correct Boolean() conversion of positiveNumber
+console.log("Boolean(7): ", Boolean(positiveNumber));
+
+// TODO: Replace null with the correct Boolean() conversion of emptyString
+console.log("Boolean(''): ", Boolean(emptyString));
+
+// TODO: Replace null with the correct String() conversion of boolValue
+console.log("String(true): ", String(boolValue));
+
+// TODO: Replace null with the correct String() conversion of numValue
+console.log("String(123): ", String(numValue));
+
+let age = parseInt(inp); // Don't change this line
+// Type your code below
+if(age < 120){
+    let value = 120 - age;
+    console.log(`${value} years till 120`);
+}else if (age == 120){
+    console.log(`Zero years till 120`);
+}
+
+let num = parseInt(inp); // Don't change this line
+// Type your code below
+if(num == 1){
+    console.log("T");
+}else if(num == 0){
+    console.log("F");
+}
+
+let billAmount = parseFloat(inp[0]); // Don't change this line
+let tipPercentage = parseFloat(inp[1]); // Don't change this line
+let numPeople = parseInt(inp[2]); // Don't change this line
+
+// Type your code below
+console.log("Bill Split Calculator");
+let tipAmount = (tipPercentage / 100) * billAmount;
+let total = billAmount + tipAmount;
+console.log(total);
+
+let billAmount = parseFloat(inp[0]); // Don't change this line
+let tipPercentage = parseFloat(inp[1]); // Don't change this line
+let numPeople = parseInt(inp[2]); // Don't change this line
+
+// Type your code below
+console.log("Bill Split Calculator");
+let tipAmount = (tipPercentage / 100) * billAmount;
+let total = billAmount + tipAmount;
+console.log(total);
+let perPerson = total / numPeople;
+console.log(perPerson);
+
+let billAmount = parseFloat(inp[0]); // Don't change this line
+let tipPercentage = parseFloat(inp[1]); // Don't change this line
+let numPeople = parseInt(inp[2]); // Don't change this line
+
+// Type your code below
+console.log("Bill Split Calculator");
+let tipAmount = (tipPercentage / 100) * billAmount;
+let total = billAmount + tipAmount;
+console.log(`Total (including tip): ${"$" + total}`);
+let perPerson = total / numPeople;
+console.log(`Each person pays: ${"$" + perPerson}`);
