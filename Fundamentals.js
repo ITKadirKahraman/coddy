@@ -495,3 +495,86 @@ let total = billAmount + tipAmount;
 console.log(`Total (including tip): ${"$" + total}`);
 let perPerson = total / numPeople;
 console.log(`Each person pays: ${"$" + perPerson}`);
+
+for(let i = 3; i <= 27; i++){
+    console.log("Hello Coddy: " + i);
+}
+
+// Write code here
+for(let i = 1; i <= 10; i++){
+    let result = 7 * i;
+    console.log(`7 x ${i} = ${result}`);
+}
+
+let number = parseFloat(inp); // Don't change this line
+
+while(number >= 3.5){
+    number /= 2;
+}
+console.log(number);
+
+let number = parseFloat(inp); // Don't change this line
+
+while(number <= 100){
+    number *= 2;
+}
+
+console.log(number);
+
+for (let i = 1; i <= 20; i++) {
+    if(i > 8){
+        break;
+    }
+    console.log(i);
+}
+
+// Write code here
+for(let i = 1; i < 20; i++){
+    if(i % 3 == 0){
+        if(i % 5 == 0){
+            console.log(i);
+            break;
+        }
+    }
+    console.log(i);
+}
+
+for (let i = 1; i <= 20; i++) {
+    if(i % 2 == 1){
+        continue;
+    }
+    console.log(i);
+}
+
+// Write code here
+for(let i = 1; i < 20; i++){
+    if(i == 4){
+        continue;
+    }
+
+    if(i == 8){
+        continue;
+    }
+
+    if(i == 12){
+        continue;
+    }
+
+    if(i == 16){
+        continue;
+    }
+    console.log(i);
+}
+
+let n = parseInt(inp); // Don't change this line
+let result = 1;
+for(let i = 1; i <= n; i++){
+    result *= i;
+}
+console.log(result);
+
+let count = 5;
+do {
+    console.log(count);
+    count--;
+}while(count > 0);
