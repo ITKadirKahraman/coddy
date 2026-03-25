@@ -578,3 +578,14 @@ do {
     console.log(count);
     count--;
 }while(count > 0);
+
+let count = 10;
+
+// Add your do...while loop below
+do{
+    console.log(`Counting down: ${count}`);
+    count -= 2;
+    if(count < 0){
+        break;
+    }
+}while(count < 10);
