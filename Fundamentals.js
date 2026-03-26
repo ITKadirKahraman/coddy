@@ -648,3 +648,16 @@ function multi(numberA, numberB){
 }
 
 multi(a, b);
+
+let num1 = parseInt(inp[0]); // Don't change this line
+let num2 = parseInt(inp[1]); // Don't change this line
+// Type your code below
+function sumRange(start, end){
+    let sum = 0;
+    for(let i = start; i <= end; i++){
+        sum += i;
+    }
+    console.log(`The sum of numbers from ${start} to ${end} is ${sum}.`);
+}
+
+sumRange(num1, num2);
