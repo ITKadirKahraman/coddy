@@ -589,3 +589,62 @@ do{
         break;
     }
 }while(count < 10);
+
+let n = parseInt(inp); // Don't change this line
+
+// Write your code below
+for(let i = 1; i < n; i++){
+    for(let y = 1; y < n; y++){
+        if(i + y === n){
+            console.log(i + " " + y);
+        }
+    }
+}
+
+let n = parseInt(inp); // Don't change this line
+
+// Write your code below
+for(let i = 1; i <= n; i++){
+    for(let y = 1; y <= n; y++){
+        if(i * y === n){
+            console.log(i + " " + y);
+        }
+    }
+}
+
+// Write the function below
+
+let n = parseInt(inp); // Don't change this line
+
+// Execute your function n times with a loop
+function loop(){
+    let sum = 0;
+    for(let i = 1; i <= 10000; i++){
+        sum += i;
+    }
+    console.log(sum);
+}
+
+for(let i = 0; i < n; i++){
+    loop();
+}
+
+// Write code here
+function printMessage(){
+    console.log("This is a reusable function!");
+}
+
+printMessage();
+printMessage();
+printMessage();
+
+let a = parseInt(inp[0]); // Don't change this line
+let b = parseInt(inp[1]); // Don't change this line
+// Type your code below
+
+function multi(numberA, numberB){
+    let sum = numberA * numberB;
+    console.log(sum);
+}
+
+multi(a, b);
