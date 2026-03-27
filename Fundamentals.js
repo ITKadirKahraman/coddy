@@ -661,3 +661,61 @@ function sumRange(start, end){
 }
 
 sumRange(num1, num2);
+
+function sigma(n) {
+    // Write code here
+    let result = 0;
+    for(let i = 1; i <= n; i++){
+        result += i;
+    }
+    return result;
+}
+
+sigma(15);
+
+// Write code here
+function findMax(a, b, c){
+    let result = 0;
+    if(a > b && a > c){
+        result = a;
+    }else if(b > a && b > c) {
+        result = b;
+    }else {
+        result = c;
+    }
+
+    return result;
+}
+
+findMax(2, 4, 5);
+
+// Type your code below
+let calculateArea = function calculateArea(width, height) {
+    return width * height;
+};
+
+// Don't change the lines below
+console.log(calculateArea(5, 10));
+console.log(calculateArea(3, 7));
+
+// Type your code below
+
+let calculateVolume = function calculateVolume(length, width, height) {
+    return length * width * height;
+};
+
+// Don't change the lines below
+console.log(calculateVolume(3, 4, 5));
+console.log(calculateVolume(2, 2, 2));
+console.log(calculateVolume(1, 4, 2));
+console.log(calculateVolume(9, 8, 7));
+
+// Type your code below
+let calculateBMI = function(weight, height) {
+    let bmi = weight / (height * height);
+    return bmi;
+};
+
+// Don't change the lines below
+console.log(calculateBMI(70, 1.75));
+console.log(calculateBMI(80, 1.8));
