@@ -2,7 +2,6 @@
 ****** Build a strong foundation with essential concepts and basic skills
 */
 
-
 // Type your code below
 let k = 88;
 let PI = 3.14;
@@ -719,3 +718,26 @@ let calculateBMI = function(weight, height) {
 // Don't change the lines below
 console.log(calculateBMI(70, 1.75));
 console.log(calculateBMI(80, 1.8));
+
+// Type your code below
+let isValid = function (username, password){
+    if(username === "user" && password === "qweasd") {
+        return true;
+    }else if(username === "admin"){
+        return true;
+    }else {
+        return false;
+    }
+};
+
+
+// Write code here
+let sumOfEvens = function (n){
+    let sum = 0;
+    for(let i = 1; i <= n; i++){
+        if(i % 2 === 0){
+            sum += i;
+        }
+    }
+    return sum;
+}
