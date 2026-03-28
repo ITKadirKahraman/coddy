@@ -756,3 +756,38 @@ function values(arr) {
         console.log(arr[i]);
     }
 }
+
+// Write code here
+function firstAndLast(arr){
+    let first = arr[0];
+    let last = arr.pop();
+    let sum = first + last
+    return sum;
+
+}
+
+function changeElement(arr, index, newElement) {
+    // Write code here
+    
+    arr[index] = newElement;
+    return arr;
+}
+
+function swapEnds(arr) {
+    // Write code here
+    let firstElement = arr.shift();
+    let lastElement = arr.pop();
+    arr.push(firstElement);
+    arr.unshift(lastElement);
+    return arr;
+}
+
+let colors = ["red", "blue", "green"];
+colors.push("yellow");
+let removedColor = colors.shift();
+colors.unshift("purple");
+let lastColor = colors.pop();
+
+console.log(colors);
+console.log(removedColor);
+console.log(lastColor);
