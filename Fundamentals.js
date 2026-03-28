@@ -741,3 +741,18 @@ let sumOfEvens = function (n){
     }
     return sum;
 }
+
+
+let shoppingList = ["bread", "eggs", "milk", "butter"];
+console.log(shoppingList);
+
+// Write code here
+let favoriteColors = ["red", "blue", "green", "yellow"];
+console.log(favoriteColors);
+
+function values(arr) {
+    // Write code here
+    for(let i = 0; i < arr.length; i++){
+        console.log(arr[i]);
+    }
+}
