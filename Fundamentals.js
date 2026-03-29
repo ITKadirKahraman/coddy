@@ -924,3 +924,8 @@ if(arr.length % 2 === 1){
 }else{
     console.log(arr.slice(mid-1,mid+1))
 }
+
+let numbers = [5, 10, 15, 20, 25, 30, 35, 40, 45];
+let num = [];
+num = numbers.splice(2, 5);
+console.log(num);
