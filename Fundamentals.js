@@ -791,3 +791,136 @@ let lastColor = colors.pop();
 console.log(colors);
 console.log(removedColor);
 console.log(lastColor);
+
+function findElement(arr, num) {
+    // Write code here
+    arr.includes(num);
+    if(arr === num){
+        return arr.indexOf(num);
+    }else{
+        return arr.indexOf(num);
+    }
+}
+
+let numbers = [40, 10, 30, 20, 50, 30, 10];
+numbers.sort((a, b) => a - b);
+numbers.reverse();
+let firstIndex = numbers.indexOf(30);
+let lastIndex = numbers.lastIndexOf(10);
+let hasHundred = numbers.includes(100);
+console.log(numbers);
+console.log(firstIndex);
+console.log(lastIndex);
+console.log(hasHundred);
+
+function processArray(arr) {
+  // Write code here
+  arr.pop();
+  arr.push(10);
+  if(arr.includes(5)){
+    let index = arr.indexOf(5);
+    arr[index] = 50;
+  }
+  arr.reverse();
+  return arr;
+}
+
+let arr = inp.split(", "); // Don't change this line
+// Write your code below
+let newArr = [];
+for(let i = 0; i < arr.length; i++){
+    if(arr[i].length > 5){
+        newArr.push(arr[i]);
+    }
+}
+console.log(newArr);
+
+// forEach
+
+let fruits = ["apple", "banana", "orange"];
+for (let i = 0; i < fruits.length; i++) {
+    console.log(`Index ${i}: ${fruits[i]}`);
+}
+
+let fruits = ["apple", "banana", "orange"];
+fruits.forEach((fruit, index) => {
+    console.log(`Index ${index}: ${fruit}`);
+});
+
+/*
+Index 0: apple
+Index 1: banana
+Index 2: orange
+*/
+
+let colors = ["red", "green", "blue"];
+colors.forEach((color, index) => {
+    console.log(`${index}: ${color}`);
+});
+
+let arr = inp.split(",").map(Number); // Don't change this line
+
+// Write your code below
+let newArr = [];
+arr.forEach((ar ,index) => {
+    if(ar < 50 || ar % 5 == 0){
+        newArr.push(arr[index]);
+    }
+});
+
+console.log(newArr);
+
+
+// for...of
+
+function countVowels(str) {
+    // Write code here
+    let num = 0;
+    for (const string of str) {
+        if(string === "a"){
+            num++;
+        }else if(string === "e"){
+            num++;
+        }else if(string === "i"){
+            num++;
+        }else if(string === "I"){
+            num++;
+        }else if(string === "o"){
+            num++;
+        }else if(string === "u"){
+            num++;
+        }
+    }
+    return num;
+}
+
+// Write code here
+function countDigits(str){
+    let count = 0;
+    for (const string of str) {
+        if (/\d/.test(string)) { // Prüft, ob Zeichen eine Zahl ist
+            count++;
+        }
+    }
+    return count;
+}
+
+let text = inp;
+// Write your code below
+    let count = 0;
+    for (const char of text) {
+        if (char.toLowerCase() === "p") {
+            count++;
+        }
+    }
+
+console.log(count);
+
+let arr = inp.split(", ").map(Number);
+// Write your code below
+let mid = Math.floor(arr.length / 2);
+if(arr.length % 2 === 1){
+    console.log(arr.slice(mid -1, mid +2));
+}else{
+    console.log(arr.slice(mid-1,mid+1))
+}
