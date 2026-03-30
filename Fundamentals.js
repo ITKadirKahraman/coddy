@@ -929,3 +929,40 @@ let numbers = [5, 10, 15, 20, 25, 30, 35, 40, 45];
 let num = [];
 num = numbers.splice(2, 5);
 console.log(num);
+
+let numbers = [1, 2, 3, 4, 5];
+let numbers2 = [6, 7, 8];
+let combined = numbers.concat(numbers2);
+let joined = combined.join(",");
+let sliced = numbers.slice(0,3);
+let spliced = numbers.splice(1, 1, 99);
+console.log(combined);
+console.log(joined);
+console.log(sliced);
+console.log(numbers);
+
+// Write code here
+function formatSentence(sentence){
+    let splited = sentence.split(" ");
+    let joined = splited.join("-");
+    console.log(joined);
+}
+
+let numbers = [1, 2, 3, 4, 5];
+let multi = numbers.map(num => num * 3);
+let filt = numbers.filter(num => num > 3);
+console.log(multi);
+console.log(filt);
+
+// Write code here
+function transformArray(number){
+    let numb = number.filter(num => num >= 10);
+    let multi = numb.map(num => num * 2);
+    return multi;
+}
+
+let arr1 = inp[0].split(", ").map(Number);
+let arr2 = inp[1].split(", ").map(Number);
+// Write your code below
+let arr3 = arr1.filter(ele => !arr2.includes(ele));
+console.log(arr3);
