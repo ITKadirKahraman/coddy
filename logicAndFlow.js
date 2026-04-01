@@ -145,3 +145,61 @@ function stringWeaver(str1, str2) {
     return result;
 }
 //  Do not write anything outside function
+
+/*
+Erstellen Sie eine Funktion namens getColumn, die drei Argumente nimmt: 
+ein 2D-Array matrix, eine Ganzzahl numberOfRows und eine Ganzzahl colIndex. 
+Die Funktion sollte ein Array zurückgeben, das alle Elemente in der
+angegebenen Spalte colIndex enthält. 
+*/
+
+function getColumn(matrix, numberOfRows, colIndex) {
+  // TODO: Return an array containing elements from the specified column index
+  let arr = [];
+  for(let i = 0; i < numberOfRows; i++){
+    arr.push(matrix[i][colIndex]);
+  }
+  return arr;
+}
+
+
+function getElementsInRow(grid, rowIndex) {
+  // TODO: Return an array with all elements in the specified row
+  // If rowIndex is out of bounds, return an empty array
+    if (rowIndex < 0 || rowIndex >= grid.length){
+        return [];
+    }else {
+        return grid[rowIndex];
+    }
+}
+// Do not write anything outside the function
+
+function countOccurrences(matrix, target) {
+  // TODO: Implement logic to count how many times 'target' appears in matrix
+  let count = 0;
+  for(let i = 0; i < matrix.length; i++){
+    for(let y = 0; y < matrix[i].length; y++){
+        if(matrix[i][y].includes(target) ){
+            count++;
+        }
+    }
+  }
+  return count;
+}
+// Do not write anything outside function
+
+function findMaxInRows(matrix) {
+  // Your code here
+  let arr = [];
+  for(let i = 0; i < matrix.length; i++){
+    let max = matrix[i][0];
+    for(let y = 0; y < matrix[i].length; y++){
+        if(matrix[i][y] > max){
+            max = matrix[i][y];
+        }
+    }
+    arr.push(max);
+  }
+  return arr;
+}
+// Do not modify below this line
