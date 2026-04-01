@@ -203,3 +203,17 @@ function findMaxInRows(matrix) {
   return arr;
 }
 // Do not modify below this line
+
+
+function mirrorRows(matrix) {
+  // TODO: Return a new 2D array where each row is reversed.
+  let arr = [];
+  for(let i = 0; i < matrix.length; i++){
+    arr.push(matrix[i]);
+    if(arr[i] == matrix[i]){
+        arr[i].reverse();
+    }
+  }
+  return arr;
+}
+// Do not write anything outside function
