@@ -217,3 +217,93 @@ function mirrorRows(matrix) {
   return arr;
 }
 // Do not write anything outside function
+
+function combineMatrices(matrixA, matrixB, op) {
+  // TODO: For each cell, if op is '+', add the corresponding cells.
+  // Otherwise, subtract them. Return the resulting 2D array.
+  let result = [];
+  for(let i = 0; i < matrixA.length; i++){
+    result[i] = [];
+    for(let y = 0; y < matrixB[i].length; y++){
+        if(op === "+"){
+            result[i][y] = matrixA[i][y] + matrixB[i][y];
+        }else if(op === "-"){
+            result[i][y] = matrixA[i][y] - matrixB[i][y];
+        }
+    }
+  }
+  return result;
+}
+// Do not write anything outside function
+
+function sumJagged(jaggedArray) {
+  // TODO: Implement logic to sum all elements of the jagged array.
+  let result = 0;
+  for(let i = 0; i < jaggedArray.length; i++){
+    for(let y = 0; y < jaggedArray[i].length; y++){
+      result += jaggedArray[i][y]; 
+    }
+  }
+  return result;
+}
+// Do not write anything outside function
+
+
+function countAllStrings(arr3D) {
+  // TODO: Calculate the total number of string elements in the 3D array
+  let result = 0;
+  for(let i = 0; i < arr3D.length; i++){
+    for(let j = 0; j < arr3D[i].length; j++){
+      for(let k = 0; k < arr3D[i][j].length; k++){
+        result++;
+      }
+    }
+  }
+  return result;
+}
+// Do not write anything outside function
+
+function printPatterns(matrix) {
+    let mainDiagonal = []
+    // TODO: Implement
+    for(let i = 0; i < matrix.length; i++){
+        mainDiagonal.push(matrix[i][i]);
+    }
+    console.log("Main Diagonal:", mainDiagonal.join(" "));
+    
+    let antiDiagonal = [];
+    // TODO: Implement
+    for(let i = 0; i < matrix.length; i++){
+        antiDiagonal.push(matrix[i][matrix.length - 1 - i]);
+    }
+    console.log("Anti-Diagonal:", antiDiagonal.join(" "));
+    
+    let topBorder = [];
+    // TODO: Implement
+    for(let i = 0; i < matrix.length; i++){
+        topBorder.push(matrix[0][i]);
+    }
+    console.log("Top Border:", topBorder.join(" "));
+    
+    let bottomBorder = [];
+    // TODO: Implement
+    for(let i = 0; i < matrix.length; i++){
+        bottomBorder.push(matrix[matrix.length-1][i]);
+    }
+    console.log("Bottom Border:", bottomBorder.join(" "));
+    
+    let leftBorder = [];
+    // TODO: Implement
+    for(let i = 0; i < matrix.length; i++){
+        leftBorder.push(matrix[i][0]);
+    }
+    console.log("Left Border:", leftBorder.join(" "));
+    
+    let rightBorder = [];
+    // TODO: Implement
+    for(let i = 0; i < matrix.length; i++){
+        rightBorder.push(matrix[i][matrix.length - 1]);
+    }
+    console.log("Right Border:", rightBorder.join(" "));
+}
+// Do not write anything outside function
