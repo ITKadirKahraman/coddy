@@ -307,3 +307,39 @@ function printPatterns(matrix) {
     console.log("Right Border:", rightBorder.join(" "));
 }
 // Do not write anything outside function
+
+
+function stackMatrices(matrixList) {
+  // TODO: Merge all 2D arrays in 'matrixList' vertically into one 2D array
+  let arr = [];
+  for(let i = 0; i < matrixList.length; i++){
+    for(let y = 0; y < matrixList[i].length; y++){
+      arr.push(matrixList[i][y]);
+    }
+  }
+  return arr;
+}
+// Do not write anything outside function
+
+function multiplyMatrices(matrixA, matrixB) {
+  // Write your code here
+  // Check if matrices can be multiplied
+  // Create the result matrix with appropriate dimensions
+  // Calculate each element in the result matrix
+  let rowsA = matrixA.length;
+  let colsA = matrixA[0].length;
+  let rowsB = matrixB.length;
+  let colsB = matrixB[0].length;
+  let result = [];
+  for(let i = 0; i < rowsA; i++){
+    result[i] = [];
+    for(let j = 0; j < colsB; j++){
+        result[i][j] = 0;
+        for(let k = 0; k < colsA; k++){
+            result[i][j] += matrixA[i][k] * matrixB[k][j]; 
+        }
+    }
+  }
+  return result;
+}
+// Do not write anything outside function
