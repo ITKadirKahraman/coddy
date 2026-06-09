@@ -143,3 +143,144 @@ function billSplitCalculator(amount, counter, procent) {
 
 console.log(billSplitCalculator(60, 4, 10));
 
+// for loop multiplicator
+function multiForLoop(num) {
+    let array = [1, 22, 13, 42, 15, 8];
+    let number = parseInt(num);
+    for (let index = 0; index < array.length; index++) {
+        let result = array[index] * number;
+        console.log(result);
+    }
+}
+
+multiForLoop(4);
+
+// for skip four numbers and even numbers
+function skipEven() {
+    let numbers = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20];
+    for (let index = 0; index < numbers.length; index++) {
+        if(numbers[index] % 2 === 1) {
+            if (numbers[index] % 4 === 1) {
+                continue;
+            }
+            console.log(index);
+        }
+    }
+}
+
+skipEven();
+
+// find the two numbers for the same result
+function numberCouple(numb) {
+    let number = parseInt(numb);
+    for (let i = 1; i < number; i++) {
+        for (let y = 1; y < number; y++) {
+            if(i + y === number){
+                console.log(i+ " " + y);
+            }
+        } 
+    }
+}
+
+numberCouple(10);
+
+// FizzBuzz with Twist
+function fizzBuzz(num) {
+    let number = parseInt(num);
+    let welcome = "Welcome to FizzBuzz!";
+    if(number % 3 === 0 && number % 7 === 0) {
+        return welcome + " " + "FizzBuzz";
+    }else if(number % 3 === 0) {
+        return welcome + " " + "Buzz";
+    }else if(number % 7 === 0) {
+        return welcome + " " + "Fizz";
+    }else {
+        return number.toString();
+    }
+}
+
+console.log(fizzBuzz(21));
+
+
+// ARRAY
+function firstAndLast() {
+    let arr = [1, 2, 3, 4, 5, 6];
+    let first = arr[0];
+    let last = arr.pop();
+    let result = first + last;
+    console.log(result);
+}
+
+firstAndLast();
+
+function changeElement(array, startIndex, endIndex, element) {
+    let arr = [];
+    array.splice(startIndex, endIndex ,element)
+    arr.push(array);
+    return arr;
+}
+
+console.log(changeElement([1, 2, 3, 4, 5, 6, 7],0, 2, "aa"));
+
+function changeElement2(array, index, element) {
+    array[index] = element;
+    return array;
+}
+
+console.log(changeElement2([1, 2, 3, 4, 5, 6, 7, 8], 2, 5));
+
+function swapEnds(array) {
+    let first = array.shift();
+    let last = array.pop();
+    array.push(first);
+    array.unshift(last);
+    return array;
+}
+
+console.log(swapEnds([1, 2, 3, 4]));
+
+function swapArray() {
+    let array = ["red", "blue", "green"];
+    array.push("yellow");
+    let removedColor = array.shift();
+    array.unshift("purple");
+    let lastColor = array.pop();
+    return array + " " + removedColor + " " + lastColor;
+}
+
+console.log(swapArray());
+
+function includ(array, index) {
+    array.includes(index);
+    if(array == index) {
+        return array.indexOf(index);
+    }else {
+        return array.indexOf(index);
+    }
+}
+
+console.log(includ([1, 3, 4, 6, 9, 2], 31));
+
+function methodOfJS() {
+    let numbers = [40, 10, 30, 20, 50, 30, 10];
+    numbers.sort((a,b) => a - b);
+    numbers.reverse();
+    let firstIndex = numbers.indexOf(30);
+    let hasHundred = numbers.includes(100);
+    return numbers + " " +  firstIndex + " " + hasHundred;
+}
+
+console.log(methodOfJS());
+
+function toArrayNumber() {
+    let array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+    let arr = [];
+    array.forEach((ar, index) => {
+        if( ar < 50 || ar % 5 == 0  ){
+            arr.push(array[index]);
+        }
+    });
+    return arr;
+}
+
+console.log(toArrayNumber());
