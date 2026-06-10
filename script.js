@@ -284,3 +284,189 @@ function toArrayNumber() {
 }
 
 console.log(toArrayNumber());
+
+function countVowels(str) {
+    let count = 0;
+    for(const string of str) {
+        if(string === "a") {
+            count++;
+        }else if(string === "e") {
+            count++;
+        }else if(string === "i") {
+            count++;
+        }else if(string === "o") {
+            count++;
+        }else if(string === "u") {
+            count++;
+        }
+    }
+    return count;
+}
+
+console.log(countVowels("Mihrima Nur Kahraman"));
+
+function countNumbers(number) {
+    let count = 0;
+    for(const num of number) {
+        if (num == 1) {
+            count++;
+        } else if(num == 2){
+            count++;
+        } else if(num == 3){
+            count++;
+        } else if(num == 4){
+            count++;
+        } else if(num == 5){
+            count++;
+        } else if(num == 6){
+            count++;
+        } else if(num == 7){
+            count++;
+        } else if(num == 8){
+            count++;
+        } else if(num == 9){
+            count++;
+        }
+    }
+    return count;
+}
+
+console.log(countNumbers("Kahram42an"));
+
+function pCounter(string) {
+    let count = 0;
+    for(const char of string) {
+        if(char.toLowerCase() === "p") {
+            count++;
+        }
+    }
+    return count;
+}
+
+console.log(pCounter("Haploopdwidpphoqwdhowqpasowdsp"));
+
+function sliceNumbers() {
+    let numbers = [5, 10, 15, 20, 25, 30, 35, 40, 45];
+    let number = [];
+    let sliceNumbers = numbers.slice(2, 7);
+    number.push(sliceNumbers);
+    return number;
+}
+
+console.log(sliceNumbers());
+
+function otherMethods() {
+    let numbers = [1,2,3,4,5];
+    let endNum = [6,7,8];
+    let arr = numbers.concat(endNum);
+    let arrJoin = arr.join(',');
+    let sliceArr = numbers.slice(0, 3);
+    numbers.splice(1,1, 99);
+    return numbers;
+}
+
+console.log(otherMethods());
+
+function formatSentence(sentence) {
+    let word = sentence.split(" ");
+    let result = word.join("-");
+    return result;
+}
+
+console.log(formatSentence("Galatasaray ist ein guter Klub."));
+
+function mapTested() {
+    let numbers = [1, 2, 3, 4, 5];
+    let multiNum = numbers.map(element => element * 2);
+    let filterNum = multiNum.filter(element => element > 3);
+    return filterNum;
+}
+
+console.log(mapTested());
+
+function transformArray(array) {
+    let filterArr = array.filter(element => element >= 10);
+    let multiArr = filterArr.map(element => element * 2);
+    return multiArr;
+}
+
+console.log(transformArray([1, 3, 14, 18, 9, 4, 6, 11, 10, 15]));
+
+function mapAndFilter() {
+    let numbers = [1, 2, 3, 4, 5];
+    let mapNumbers = numbers.map(element => element * 3);
+    let filterNumber = mapNumbers.filter(element => element > 3);
+    return filterNumber;
+}
+
+console.log(mapAndFilter());
+
+let grocery = [];
+
+function addItem(item) {
+    grocery.push(item);
+    let message = `${item} added to the grocery list.`
+    return message;
+}
+
+console.log(addItem("Milk"));
+console.log(addItem("Bread"));
+console.log(addItem("Eggs"));
+
+function removeItem(item) {
+    const index = grocery.indexOf(item);
+    if(index > -1){
+        grocery.splice(index, 1);
+    }
+    let message = `${item} is not in the grocery list.`;
+    return message;
+}
+
+console.log(removeItem("Eggs"));
+console.log(removeItem("Milk"));
+
+function viewList() {
+    let message = "Grocery List: ";
+    if(grocery.length < 1) {
+        message = "The grocery list is empty."
+    }
+
+    for (let index = 0; index < grocery.length; index++) {
+        message += `${index + 1}. ${grocery[index]} `;
+    }
+
+    return message;
+}
+
+console.log(viewList());
+
+function starpyramid(n) {
+    let number = parseInt(n);
+    let char = "*";
+    for (let index = 1; index <= number; index+=2) {
+        console.log(char.repeat(index));
+    }
+}
+
+starpyramid(10);
+
+function doubleOdds(numbers) {
+    let odd = numbers.filter(element => element % 2 === 1);
+    let num = odd.map(element => element * 2);
+    return num;
+}
+
+function doubleOddsPart2(numbers) {
+    let arr = [];
+    for (let index = 0; index < numbers.length; index++) {
+        if (numbers[index] % 2 === 1) {
+            numbers[index] = numbers[index] * 2;
+            arr.push(numbers[index]);
+        }
+    }
+
+    return arr;
+}
+
+console.log(doubleOdds([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]));
+console.log(doubleOddsPart2([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]));
