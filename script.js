@@ -470,3 +470,47 @@ function doubleOddsPart2(numbers) {
 
 console.log(doubleOdds([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]));
 console.log(doubleOddsPart2([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]));
+
+/*
+*****   Logik & Ablauf
+*/
+
+function greetAll(string) {
+    let name = [];
+    name.push(string);
+    let message = "";
+    for (let index = 0; index < name.length; index++) {
+        message += `Hello, ${name[index]}!\n`;
+    }
+    return message;
+}
+
+console.log(greetAll("Kadir"));
+console.log(greetAll("Mihrima"));
+
+function alternateCase(string) {
+    let str = "";
+    for (let index = 0; index < string.length; index++) {
+        if(index % 2 === 0) {
+            str += string[index].toUpperCase();
+        }else if(index % 2 === 1) {
+            str += string[index].toLowerCase();
+        }
+    }
+    return str;
+}
+
+console.log(alternateCase("Galatasaray"));
+
+function countUniqueVowels(string) {
+    let vowels = ['a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U'];
+    let s = [];
+    for (let index = 0; index < string.length; index++) {
+        if(vowels.includes(string[index]) && !s.includes(string[index])) {
+            s += string[index];
+        }
+    }
+    return s.length;
+}
+
+console.log(countUniqueVowels("Malak, Hello World"));
