@@ -514,3 +514,38 @@ function countUniqueVowels(string) {
 }
 
 console.log(countUniqueVowels("Malak, Hello World"));
+
+
+function alternateCase2(string) {
+    let str = "";
+    for (let index = 0; index < string.length; index++) {
+        if (index % 2 === 0) {
+            str += string[index].toUpperCase();
+        } else  {
+            str += string[index].toLowerCase();
+        }
+    }
+    return str;
+}
+
+console.log(alternateCase2("forzafußball"));
+
+
+function formatBlogTitle(string) {
+    let blogTitle = `${string}`;
+    let blog = blogTitle.trim();
+    let words = blog.split(" ");
+
+    for (let index = 0; index < string.length; index++) {
+        if(words[index]) {
+            words[index] = words[index][0].toUpperCase() + words[index].substring(1).toLowerCase(); 
+        }
+    }
+
+    let formatedWords = words.join(" ");
+    let word = formatedWords.replaceAll("Javascript", "JavaScript");
+
+    return word;
+}
+
+console.log(formatBlogTitle(" how to learn javascript for beginners "));
