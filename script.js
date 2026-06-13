@@ -549,3 +549,56 @@ function formatBlogTitle(string) {
 }
 
 console.log(formatBlogTitle(" how to learn javascript for beginners "));
+
+function stringWeav(st, str) {
+    let string = st.replace(/\d+/g, "");
+    let string2 = str.replace(/\d+/g, "");
+    let string3 = string + string2;
+    let vowels = ['a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U'];
+
+    for (let index = 0; index < string3.length; index++) {
+        if (string3[index] === vowels[index]) {
+            string3[index].toUpperCase();
+        }
+    }
+    return string3;
+}
+
+console.log(stringWeav("Kad2i332r", "Kahr2326a8m12an"));
+
+function stringWeaver(str1, str2) {
+    let numbers = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
+    let vowels = ['a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U'];
+
+    // clean numbers from string
+    let cleanStr1 = '';
+    for(let index = 0; index < str1.length; index++) {
+        if(!numbers.includes(str1[index])) {
+            cleanStr1 += str1[index];
+        }
+    }
+
+    let cleanStr2 = '';
+    for(let index = 0; index < str2.length; index++) {
+        if(!numbers.includes(str2[index])) {
+            cleanStr2 += str2[index];
+        }
+    }
+
+    // combine cleaned strings 
+    let combined = `${cleanStr1} ${cleanStr2}`;
+
+    // convert vowels to uppercase
+    let result = '';
+    for(let index = 0; index < combined.length; index++) {
+        let char = combined[index];
+        if(vowels.includes(char)) {
+            char = char.toUpperCase();
+        }
+        result += char;
+    }
+
+    return result;
+}
+
+console.log(stringWeaver("Kad2i332r", "Kahr2326a8m12an"));
