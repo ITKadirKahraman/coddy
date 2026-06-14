@@ -602,3 +602,35 @@ function stringWeaver(str1, str2) {
 }
 
 console.log(stringWeaver("Kad2i332r", "Kahr2326a8m12an"));
+
+
+function twoStringWeaver(str1, str2) {
+    let numbers = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
+    let vowels = ['a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U'];
+
+    let clearString1 = "";
+    for (let index = 0; index < str1.length; index++) {
+        if(!numbers.includes(str1[index])) {
+            clearString1 += str1[index];
+        }
+    }
+
+    let clearString2 = "";
+    for (let index = 0; index < str2.length; index++) {
+        if( !numbers.includes(str2[index]) ) {
+            clearString2 += str2[index];
+        }
+    }
+
+    let string = `${clearString1} ${clearString2}`;
+    let result = "";
+    for (let index = 0; index < string.length; index++) {
+        let char = combined[index];
+        if(vowels.includes(char)) {
+            char = char.toUpperCase();
+        }
+        result += char;
+    }
+
+    return result;
+}
