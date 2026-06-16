@@ -634,3 +634,150 @@ function twoStringWeaver(str1, str2) {
 
     return result;
 }
+
+// Mehrdimensionale Arrays
+function getColumn(array, numberOfRows, colIndex) {
+    let arr = [];
+    for (let index = 0; index < numberOfRows; index++) {
+        arr.push(array[index][colIndex])
+    }
+    return arr;
+}
+
+console.log(getColumn([[1, 2, 3], [4, 5, 6], [7, 8, 9]], 3, 1));
+
+function getElementsInRow(grid, rowIndex) {
+    let array = [];
+    for (let index = 0; index < grid.length; index++) {
+        if(rowIndex < 0 || rowIndex >= grid.length) {
+            return [];
+        }else if(index == rowIndex) {
+            array = grid[index]
+        }
+    }
+
+    return array;
+}
+
+console.log(getElementsInRow([[1,2,3],[4,5,6],[7,8,9]], 0))
+
+
+function getColumn2(matrix, numberOfRows, colIndex) {
+    let array = [];
+    for (let index = 0; index < numberOfRows; index++) {
+        array.push(matrix[index][colIndex]);
+    }
+
+    return array;
+}
+
+console.log(getColumn2([[1, 2, 3], [4, 5, 6], [7, 8, 9]], 3, 1));
+
+function getElementsInRow2(grid, rowIndex) {
+    let arr = [];
+
+    for (let index = 0; index < grid.length; index++) {
+        if (rowIndex < 0 || rowIndex >= grid.length) {
+            return [];
+        }else if(index == rowIndex){
+            arr = grid[index];
+        }
+    }
+
+    return arr;
+}
+
+
+function countOccurrences(matrix, target) {
+    let count = 0;
+    for (let x = 0; x < matrix.length; x++) {
+        for (let y = 0; y < matrix[x].length; y++) {
+            if (matrix[x][y].includes(target)) {
+                count++;
+            }
+        }
+    }
+    return count;
+}
+
+console.log(countOccurrences([["cat", "dog", "cat"], ["dog", "cat", "dog"]], "dog"));
+
+function findMaxInRows(matrix) {
+    let array = [];
+    for (let x = 0; x < matrix.length; x++) {
+        let max = matrix[x][0];
+        for (let y = 0; y < matrix[x].length; y++) {
+            if (matrix[x][y] > max) {
+                max = matrix[x][y];
+            }
+        }
+
+        array.push(max);
+    }
+
+    return array;
+}
+
+console.log(findMaxInRows([[10,20,15],[5,11,8],[25,4,13],[14,16,22]]));
+
+function mirrorRows(matrix) {
+    let arr = [];
+    for (let x = 0; x < matrix.length; x++) {
+        arr.push(matrix[x]);
+        if(arr[x] == matrix[x]) {
+            arr[x].reverse();
+        }
+    }
+
+    return arr;
+}
+
+console.log(mirrorRows([[1, 2, 3], [4, 5, 6], [7, 8, 9]]));
+
+function mirrorRows2(matrix) {
+    let arr = [];
+    for (let x = 0; x < matrix.length; x++) {
+        arr.push(matrix[x]);
+        for (let y = 0; y < matrix[x].length; y++) {
+            if(arr[x] == matrix[x]) {
+                arr[x].reverse();
+            }   
+        }
+    }
+
+    return arr;
+}
+
+console.log(mirrorRows2([[1, 2, 3], [4, 5, 6], [7, 8, 9]]));
+
+function combineMatrices(matrixA, matrixB, op) {
+    let arr = [];
+    for (let x = 0; x < matrixA.length; x++) {
+        arr[x] = [];
+        for (let y = 0; y < matrixB[x].length; y++) {
+            if(op === '+') {
+                arr[x][y] = matrixA[x][y] + matrixB[x][y];
+            } else if(op === '-') {
+                arr[x][y] = matrixA[x][y] - matrixB[x][y];
+            }
+        }
+    }
+
+    return arr;
+}
+
+console.log(combineMatrices([[1, 2], [3, 4]],[[5, 6], [7, 8]], '+'));
+
+function sumJagged(matrix) {
+    let summe = 0;
+    for (let x = 0; x < matrix.length; x++) {
+        for (let y = 0; y < matrix[x].length; y++) {
+            summe += matrix[x][y];
+        }
+    }
+
+    return summe;
+}
+
+console.log(sumJagged([[1, -2, 3], [4, -5], [6], [-7, 8, -9, 10]]
+));
