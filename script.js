@@ -769,15 +769,76 @@ function combineMatrices(matrixA, matrixB, op) {
 console.log(combineMatrices([[1, 2], [3, 4]],[[5, 6], [7, 8]], '+'));
 
 function sumJagged(matrix) {
-    let summe = 0;
+    let result = 0;
     for (let x = 0; x < matrix.length; x++) {
         for (let y = 0; y < matrix[x].length; y++) {
-            summe += matrix[x][y];
+            result += matrix[x][y];
+        }
+    }
+    return result;
+}
+
+console.log(sumJagged([[1000.5, 2000], [500.25], [750.75, 250.5, 1500]]));
+
+function flattenJagged(matrix) {
+    let array = [];
+    for (let x = 0; x < matrix.length; x++) {
+        for (let y = 0; y < matrix[x].length; y++) {
+            array.push(matrix[x][y]);
+        }
+    }
+    return array;
+}
+
+console.log(flattenJagged([[1,2,3],[4,5],[6,7,8,9]]));
+
+function countAllStrings(array) {
+    let count = 0;
+    let arr = [];
+    for (let x = 0; x < array.length; x++) {
+        for (let y = 0; y < array[x].length; y++) {
+            for (let z = 0; z < array[x][y].length; z++) {
+                count++;
+            }
+        }
+    }
+    return count;
+}
+
+console.log(countAllStrings([ [["hello", "world"], ["test"], ["coding"]], [["array"], ["javascript"], ["fun", "times"]], [["three", "dimensional"], ["data", "structure"]] ]));
+
+function find3DElement(array, x, y, z) {
+    let message = "Invalid coordinates";
+    let char = '';
+    for (let i = 0; i < array.length; i++) {
+        for (let j = 0; j < array[i].length; j++) {
+            for (let k = 0; k < array[i][j].length; k++) {
+                if (array[i][j][k].includes(array[x][y][z])) {
+                    char = array[x][y][z];
+                }
+            }
         }
     }
 
-    return summe;
+    if(x < 0 || x >= array.length){
+        return message;
+    } 
+    
+    if(y < 0 || y >= array[x].length){
+        return message;
+    } 
+    
+    if(z < 0 || z >= array[x][y].length){
+        return message;
+    }
+    return char;
 }
 
-console.log(sumJagged([[1, -2, 3], [4, -5], [6], [-7, 8, -9, 10]]
-));
+console.log(find3DElement([[["cat","dog"],["elephant","frog"]],[["giraffe","hippo"],["iguana","jaguar"]]]
+, 1, 0, 0));
+
+function printPatterns(matrix) {
+    
+}
+
+console.log(printPatterns([[1, 2, 3, 4], [5, 6, 7, 8], [9, 10, 11, 12], [13, 14, 15, 16]]));
