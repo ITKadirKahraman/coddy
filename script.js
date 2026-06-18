@@ -910,17 +910,35 @@ function findSumPatterns(matrix) {
     for (let index = 0; index < matrix.length; index++) {
         mainSum += matrix[index][index];
     }
+
     // Calculate anti-diagonal sum
     let antiMainSum = 0;
     for (let index = 0; index < matrix.length; index++) {
         antiMainSum += matrix[index][matrix.length - 1 - index];
     }
+
     // Calculate border sum
     let borderSum = 0;
+    /*
     for (let index = 0; index < matrix.length; index++) {
-        borderSum += matrix[0][index] + matrix[matrix.length -1][index] + matrix[index][0] + matrix[index][matrix.length - 1] +
+        borderSum += matrix[0][index] + matrix[matrix.length -1][index] + matrix[index][0] + matrix[index][matrix.length - 1]
     }
-  
+    */
+
+    for (let j = 0; j < matrix.length; j++) {
+        borderSum += matrix[0][j];
+        if (matrix.length > 1) { 
+            borderSum += matrix[matrix.length-1][j]; 
+        }
+    }
+    
+    for (let i = 1; i < matrix.length-1; i++) {
+        borderSum += matrix[i][0];
+        if (matrix.length > 1) {
+            borderSum += matrix[i][matrix.length-1];
+        }
+    }
+
     // Format and print the results
     return `
     Main Diagonal sum: ${mainSum}
