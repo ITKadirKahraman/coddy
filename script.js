@@ -838,7 +838,95 @@ console.log(find3DElement([[["cat","dog"],["elephant","frog"]],[["giraffe","hipp
 , 1, 0, 0));
 
 function printPatterns(matrix) {
+    let mainDiagonal = []
+    // TODO: Implement
+    for (let index = 0; index < matrix.length; index++) {
+        mainDiagonal.push(matrix[index][index]);
+    }
+    console.log("Main Diagonal:", mainDiagonal.join(" "));
+
+    let antiDiagonal = [];
+    // TODO: Implement
+    for (let index = 0; index < matrix.length; index++) {
+        antiDiagonal.push(matrix[index][matrix.length - 1 - index])
+    }
+    console.log("Anti-Diagonal:", antiDiagonal.join(" "));
     
+    let topBorder = [];
+    // TODO: Implement
+    for (let index = 0; index < matrix.length; index++) {
+        topBorder.push(matrix[0][index]);
+    }
+    console.log("Top Border:", topBorder.join(" "));
+    
+    let bottomBorder = [];
+    // TODO: Implement
+    for (let index = 0; index < matrix.length; index++) {
+        bottomBorder.push(matrix[matrix.length - 1][index]);
+    }
+    console.log("Bottom Border:", bottomBorder.join(" "));
+    
+    let leftBorder = [];
+    // TODO: Implement
+    for (let index = 0; index < matrix.length; index++) {
+        leftBorder.push(matrix[index][0])
+    }
+    console.log("Left Border:", leftBorder.join(" "));
+    
+    let rightBorder = [];
+    // TODO: Implement
+    for (let index = 0; index < matrix.length; index++) {
+        rightBorder.push(matrix[index][matrix.length - 1])
+    }
+    console.log("Right Border:", rightBorder.join(" "));
+
+    return `
+    Main Diagonal: ${mainDiagonal.join(" ")}
+    Anti Diagonal: ${antiDiagonal.join(" ")}
+    Top Border: ${topBorder.join(' ')}
+    Bottom Border: ${bottomBorder.join(" ")}
+    Left Border: ${leftBorder.join(" ")}
+    Right Border: ${rightBorder.join(" ")}
+    `
 }
 
 console.log(printPatterns([[1, 2, 3, 4], [5, 6, 7, 8], [9, 10, 11, 12], [13, 14, 15, 16]]));
+
+function stackMatrices(matrixList) {
+    let arr = [];
+    for (let x = 0; x < matrixList.length; x++) {
+        for (let y = 0; y < matrixList[x].length; y++) {
+            arr.push(matrixList[x][y]);
+        }
+    }
+    return arr;
+}
+
+console.log(stackMatrices([   [     [1, 2, 3, 4]   ],   [     [5, 6, 7, 8],     [9, 10, 11, 12]   ],   [     [13, 14, 15, 16]   ] ]));
+
+function findSumPatterns(matrix) {
+    let mainSum = 0;
+    // Calculate main diagonal sum
+    for (let index = 0; index < matrix.length; index++) {
+        mainSum += matrix[index][index];
+    }
+    // Calculate anti-diagonal sum
+    let antiMainSum = 0;
+    for (let index = 0; index < matrix.length; index++) {
+        antiMainSum += matrix[index][matrix.length - 1 - index];
+    }
+    // Calculate border sum
+    let borderSum = 0;
+    for (let index = 0; index < matrix.length; index++) {
+        borderSum += matrix[0][index] + matrix[matrix.length -1][index] + matrix[index][0] + matrix[index][matrix.length - 1] +
+    }
+  
+    // Format and print the results
+    return `
+    Main Diagonal sum: ${mainSum}
+    Anti Diagonal sum: ${antiMainSum}
+    Border sum: ${borderSum}
+    `;
+}
+
+console.log(findSumPatterns([[1,2,3],[4,5,6],[7,8,9]]));
