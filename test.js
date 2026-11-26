@@ -238,4 +238,8 @@ function multiplyMatrices(matrixA, matrixB) {
 // Do not write anything outside function
 
 console.log([[1,2,3],[4,5,6]][[7,8],[9,10],[11,12]]);
+<<<<<<< HEAD
 // Ausgabe: [ [ 58, 64 ], [ 139, 154 ] ]
+=======
+// Ausgabe: [ [ 58, 64 ], [ 139, 154 ] ]
+>>>>>>> master

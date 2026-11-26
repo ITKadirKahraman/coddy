@@ -67,4 +67,8 @@ function countOccurrences(matrix, target) {
   return count;
 }
 // Do not write anything outside function
+<<<<<<< HEAD
 console.log(countOccurrences([["a", "b", "a"], ["c", "a", "d"], ["a", "e", "f"]], 'b'));
+=======
+console.log(countOccurrences([["a", "b", "a"], ["c", "a", "d"], ["a", "e", "f"]], 'b'));
+>>>>>>> master
